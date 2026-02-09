@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav_bg {
+  background: rgb(243, 240, 247);
+  background: linear-gradient(
+    90deg,
+    rgba(243, 240, 247, 1) 0%,
+    rgba(245, 243, 246, 1) 35%,
+    rgba(250, 251, 235, 1) 100%
+  );
+}

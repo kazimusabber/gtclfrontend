@@ -1,0 +1,8 @@
+.destination-items-wrap {
+  max-width: 90rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+

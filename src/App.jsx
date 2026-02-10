@@ -250,10 +250,13 @@ function App() {
         <Route path="/news-details/:id" element={<NewsDetails />} />
         <Route path="/course-details/:id" element={<BlogDetails />} />
         <Route path="/accreditation" element={<Accreditation />} />
-        <Route path="/result" element={<Result/>} />
-        <Route path="/registration" element={<RegisterForm/>} />
+        <Route path="/result" element={<Result />} />
+        <Route path="/registration" element={<RegisterForm />} />
         <Route path="/company-details/:id" element={<CompanyDetails />} />
-        <Route path="/certificate/:id" element={<Certificate />} />
+        <Route
+          path="/certificate/:certificateType/:id"
+          element={<Certificate />}
+        />
       </Routes>
       <Footer data={Footer_section[0]} data2={Footer_section[1]} />
     </>

@@ -16,9 +16,7 @@ const Certificate = () => {
   }, [certificateType, id]);
 
   const getData = async () => {
-    const response = await axios.get(
-      `${API_Link}/certificate/info/${certificateType}/${id}`,
-    );
+    const response = await axios.get(`${API_Link}/certificate/info/${id}`);
     console.log(response.data);
     setContents(response.data);
   };
@@ -340,7 +338,7 @@ const Certificate = () => {
                 >
                   GREENLAND TRAINING CENTRE LTD
                 </div>
-                <div className="t m0 x3 h11 y4 ff3 fs0 fc2 sc0 ls2 ws4">
+                <div className="t m0 x18 h11 y4 ff3 fs0 fc2 sc0 ls2 ws4">
                   This certificate is presented to{" "}
                   <span
                     style={{
@@ -353,7 +351,15 @@ const Certificate = () => {
                     <span style={{ position: "absolute", bottom: "0px" }}>
                       {contents.name}
                     </span>
-                    ...............................
+                    <span
+                      style={{
+                        fontSize: "60px",
+                        fontWeight: "bold",
+                        fontFamily: "ui-monospace",
+                      }}
+                    >
+                      ....................................
+                    </span>
                   </span>
                   <span
                     style={{
@@ -362,34 +368,77 @@ const Certificate = () => {
                       fontFamily: "ui-monospace",
                     }}
                   >
-                    ...... &nbsp; &nbsp; Passport No{" "}
+                    .... &nbsp;
+                  </span>
+                  <span>Passport No </span>
+                  <span
+                    style={{
+                      fontSize: "60px",
+                      fontWeight: "bold",
+                      fontFamily: "ui-monospace",
+                      position: "relative",
+                      display: "inline-block",
+                    }}
+                  >
+                    ..........................
                     <span
-                      style={{ position: "absolute", bottom: "0px" }}
-                    ></span>
-                    ..................................................
+                      style={{
+                        position: "absolute",
+                        bottom: "20px",
+                        left: "50px",
+                      }}
+                    >
+                      AB889745
+                    </span>
                   </span>
                 </div>
-                <div className="t m0 x5 h3 y6 ff3 fs0 fc2 sc0 ls2 ws4">
+                <div className="t m0 xb h3 y6 ff3 fs0 fc2 sc0 ls2 ws4">
                   for duly & successful{" "}
                   <span className="ls0">
-                    completion of .........
+                    completion of&nbsp;
                     <span
                       style={{
                         fontSize: "60px",
                         fontWeight: "bold",
                         fontFamily: "ui-monospace",
-                        position: "relative",
+                      }}
+                    >
+                      ....
+                    </span>
+                    <span
+                      style={{
+                        fontSize: "60px",
+                        fontWeight: "bold",
+                        fontFamily: "ui-monospace",
+                        position: "absolute",
                         bottom: "5px",
                       }}
                     >
                       {contents.coursename}
                     </span>
-                    ......................................
+                    <span
+                      style={{
+                        fontSize: "60px",
+                        fontWeight: "bold",
+                        fontFamily: "ui-monospace",
+                      }}
+                    >
+                      .........................
+                    </span>
                   </span>
                 </div>
-                <div className="t m0 x6 h4 y7 ff3 fs0 fc2 sc0 ls3 ws4">
+                <div className="t m0 x18 h4 y7 ff3 fs0 fc2 sc0 ls3 ws4">
                   {" "}
-                  hours course of .........
+                  hours course of&nbsp;
+                  <span
+                    style={{
+                      fontSize: "60px",
+                      fontWeight: "bold",
+                      fontFamily: "ui-monospace",
+                    }}
+                  >
+                    ....
+                  </span>
                   <span
                     style={{
                       fontSize: "60px",
@@ -401,8 +450,25 @@ const Certificate = () => {
                   >
                     Russian Language
                   </span>
-                  .......................................................................................
-                  Has obtained grade ...........................
+                  <span
+                    style={{
+                      fontSize: "60px",
+                      fontWeight: "bold",
+                      fontFamily: "ui-monospace",
+                    }}
+                  >
+                    ....................................&nbsp;
+                  </span>
+                  Has obtained grade&nbsp;
+                  <span
+                    style={{
+                      fontSize: "60px",
+                      fontWeight: "bold",
+                      fontFamily: "ui-monospace",
+                    }}
+                  >
+                    .....
+                  </span>
                   <span
                     style={{
                       fontSize: "60px",
@@ -413,6 +479,15 @@ const Certificate = () => {
                     }}
                   >
                     {contents.grade}
+                  </span>
+                  <span
+                    style={{
+                      fontSize: "60px",
+                      fontWeight: "bold",
+                      fontFamily: "ui-monospace",
+                    }}
+                  >
+                    ........
                   </span>
                 </div>
                 <div className="t m0 x8 h5 y9 ff1 fs0 fc0 sc0 ls2 ws4">
@@ -456,7 +531,7 @@ const Certificate = () => {
                     <img
                       src={Trainingcoordinatorsign}
                       style={{
-                        marginLeft: "450px",
+                        marginLeft: "180px",
                         height: "160px",
                         marginTop: "115px",
                       }}
